@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var c=()=>{
+            // 获取设备的宽度
+            let w = document.documentElement.clientWidth;
+            //20和320都是自己设计的
+            //20号字体在什么宽度下显示最合适，设置默认值，然后这个字号不能大于40，如果大于自动变成40号
+            //否则的话字号该多少就是多少
+            let n = (20*(w/320)>40?40+"px":(20*(w/320)+"px"));
+            document.documentElement.style.fontSize=n;                        
+        }
+        window.addEventListener("load",c);
+        window.addEventListener("resize",c);
+    </script>
+    <style>
+        html{
+            font-size: 16px;
+        }
+
+        div{
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div>123</div>
+</body>
+</html>

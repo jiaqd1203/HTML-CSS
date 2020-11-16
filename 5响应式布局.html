@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 把 initial-scale=1.0改成了no表示不支持浏览器本身自带的缩放功能-->no
+    <meta name="viewport" content="width=device-width, initial-scale=no">
+    <title>响应式布局</title>
+    <!-- 也可以写三个css，common是基本设置，big和small写差异 -->
+    <link rel="stylesheet" href="5big.css" media="(min-device-width:1000px)">
+    <link rel="stylesheet" href="5small.css"
+    media="(min-device-width:400px) and (max-device-width:600px)">
+</head>
+<body>
+    <div id="layout">
+        <div id="top"></div>
+        <div id="main">
+            <div>
+                <li>分类1</li>
+                <li>分类2</li>
+                <li>分类3</li>
+                <li>分类4</li>
+                <li>分类5</li>
+                <li>分类6</li>
+            </div>
+            <div>
+                <li>图片</li>
+                <li>图片</li>
+                <li>图片</li>
+                <li>图片</li>
+                <li>图片</li>
+                <li>图片</li>
+                <li>图片</li>
+                <li>图片</li>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+#layout{
+    display: flex;
+    /* 主轴方向，纵向 */
+    flex-direction: column;
+    /* 改成100%，铺满移动端 */
+    width: 100%;
+    margin: 0 auto;
+}
+#top{
+    width: 100%;
+    flex: 0 0 50px;
+    margin: 0 auto;
+    background-color: yellow;
+    /* 要设置高度才能显示出来 */
+    /* height: 50px; */
+}
+#main{
+    /* 因为是column纵轴排列，所以这个100%是指高度
+    所以这个100%不生效 */
+    flex: 0 0 100%;
+    display: flex;
+    /* 默认，这个可以改*/
+    flex-direction: row;
+    /* 设置换行，否则图片在分类的右边展示而不是下边 */
+    flex-wrap: wrap;
+}
+#main div:first-child{
+    /* 改成100% */
+    flex: 0 0 100%;
+    background-color: #f5f5f5;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    align-content: flex-start;
+}
+#main div:first-child li{
+    /* 30% */
+    flex: 0 0 30%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+#main div:nth-child(2){
+    /* 100% */
+    flex: 0 0 100%;
+    background-color: #f5f5f5;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#main div:nth-child(2) li{
+    /* 30% */
+    flex: 0 0 30%;
+    height: 120px;
+    text-align: center;
+    border-bottom: 1px solid white;
+    background-color: yellow;
+    margin-top: 10px;
+}

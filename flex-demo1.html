@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #div0{
+            display: flex;
+            width: 400px;
+            height: 500px;
+            background-color: violet;          
+            
+        }
+
+        #div0 div{
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            /* flex-basis:30%; */
+        }
+        /*  flex-grow各分配1，就是把剩余部分平均分成两份
+            400-50-100=250px    250/2=125
+            50+125=175px    100+125 = 225px
+        */
+        /* 
+          #div0 div:nth-child(1){
+            flex-basis: 50px;
+            flex-grow: 1;
+        }
+          #div0 div:nth-child(2){
+            flex-basis: 100px;
+            flex-grow: 1;
+        }
+        */
+
+        /*  计算超出的部分，超出部分我们一共分四份
+            400-600=-200    200/4=50
+            300-50=250px    300-150=150px
+         */
+         /* child2简写: flex:4 3 300 */
+        #div0 div:nth-child(1){
+            flex-basis: 300px;
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+          #div0 div:nth-child(2){
+            flex-basis: 300px;
+            flex-grow: 4;
+            flex-shrink: 3;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="div0">
+        <div></div>
+        <div></div>
+        
+    </div>
+</body>
+</html>

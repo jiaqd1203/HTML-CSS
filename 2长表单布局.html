@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #form div{
+            display: flex;
+            /* height: 30px; */
+            align-items: flex-start;
+            flex: 0 0 30px;
+        }
+        #form div label{
+            /* flex: 0 0 100px; */
+            flex: 0 0 200px;
+            text-align: right;
+        }
+
+        #form{
+            display: flex;
+            flex-direction: column;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="">
+        <div id="form">
+            <div>
+                <label for="">name: </label>
+                <input type="text">
+            </div>
+            <div>
+                <label for="">password: </label>
+                <input type="text">
+            </div>
+            <div>
+                <label for="">re-enter password: </label>
+                <input type="text">
+            </div>
+        </div>
+    </form>
+</body>
+</html>

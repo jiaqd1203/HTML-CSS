@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div0{
+            width: 400px;
+            background-color: violet;
+            display: flex;
+            /* flex-direction: row; */
+            /* flex-wrap: wrap; */
+            /* row以x为主轴，column以y为主轴 */
+            flex-flow: row wrap;
+            justify-content: space-around;
+            align-items: center;
+            height: 400px;
+        }
+
+        #div0 div{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div0">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+</body>
+</html>
